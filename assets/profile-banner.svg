@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="116" viewBox="0 0 880 116">
+  <defs>
+    <linearGradient id="surface" x2="1" y2="1" gradientUnits="objectBoundingBox">
+      <stop stop-color="#070c19"/>
+      <stop offset="1" stop-color="#10234b"/>
+    </linearGradient>
+    <linearGradient id="trace">
+      <stop stop-color="#2666f5"/>
+      <stop offset=".57" stop-color="#4387ff"/>
+      <stop offset="1" stop-color="#8ae1ff"/>
+    </linearGradient>
+    <pattern id="grid" width="22" height="22" patternUnits="userSpaceOnUse">
+      <path d="M22 0H0V22" fill="none" stroke="#8aa8ed" stroke-opacity=".14"/>
+    </pattern>
+    <clipPath id="edge">
+      <rect width="880" height="116" rx="14"/>
+    </clipPath>
+  </defs>
+  <style>
+    @media (prefers-reduced-motion: no-preference) {
+      .signal { animation: trace-in 1.6s cubic-bezier(.25,.65,.3,1) both; }
+      @keyframes trace-in {
+        from { stroke-dashoffset: 1; }
+        to { stroke-dashoffset: 0; }
+      }
+    }
+  </style>
+  <g clip-path="url(#edge)">
+    <rect width="880" height="116" fill="url(#surface)"/>
+    <rect width="880" height="116" fill="url(#grid)"/>
+    <g fill="none" stroke="#527bc7" stroke-opacity=".38">
+      <path d="M0 89H214L254 49H414L450 85H642L689 38H880"/>
+      <path d="M0 101H278L311 68H457L482 93H696L737 52H880"/>
+      <path d="M0 64H122L157 29H373L412 68H590L621 37H880"/>
+    </g>
+    <path d="M0 80H188L231 37H391L428 74H622L670 26H880"
+      fill="none" stroke="#5384db" stroke-opacity=".36" stroke-width="2"/>
+    <path class="signal" d="M0 80H188L231 37H391L428 74H622L670 26H880"
+      pathLength="1" stroke-dasharray="1" fill="none" stroke="url(#trace)" stroke-width="3"/>
+    <g fill="#a2ddff">
+      <circle cx="231" cy="37" r="3"/>
+      <circle cx="428" cy="74" r="3"/>
+      <circle cx="670" cy="26" r="3"/>
+    </g>
+  </g>
+</svg>
